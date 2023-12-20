@@ -31,9 +31,6 @@ app.post('/', async (req, res, next) => {
 	try {
 		console.log(req.body);
 		res.status(200).json(req.body);
-    setTimeout(() => {
-      throw new Error('erro')
-    }, 200)
 	} catch (error) {
     console.log('deu ruim')
     res.status(400).json(error)
